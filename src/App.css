@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+
+span {
+    margin-left: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-small {
+    left: 45%;
+    background-color: rgba(71, 40, 247, 0.99);
+}
+.btn-small:hover {
+    background-color: rgba(71, 40, 247, 0.99);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.within-text {
+    margin: 0.3rem 0 0.3rem 0.6rem;
+}
+.list{
+    font-weight: bold;
+    font-family: sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p .fa-clipboard {
+    padding-right: 10px;
+    right: 80%;
+    font-size: 2.1rem;
+    color: rgba(76, 151, 57, 0.99);
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.collection-item .fa {
+    font-size: 2rem;
+    color: rgba(219, 78, 78, 0.99);
+    position: fixed;
+    visibility: hidden;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.collection-item:hover .fa,
+.collection-item .fa:hover {
+    transition: .60s cubic-bezier(0, 0.5, 0, 1);
+    transform: translate(-250%, 0);
+    margin-left: -3rem;
+    visibility: visible;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(-360deg);
 }
+
+.fa-times-circle:hover {
+    border-radius: 40%;
+    animation: pulse 2s infinite
+}
+
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 0 0 rgba(216, 45, 45, 0.99) ;
+    }
+    70%{
+        box-shadow: 0 0 0 10px rgba(219, 78, 78, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(219, 78, 78, 0);
+    }
+}
+
+
+
+
